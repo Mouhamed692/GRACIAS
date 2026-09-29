@@ -1,0 +1,6 @@
+{
+  "name": "Cursor AI Studio - Éditeur Intelligent & Débogueur Temps Réel",
+  "description": "Environnement de développement intelligent inspiré de Cursor avec complétion IA inline temps réel (Tab), commande inline (Cmd+K), débogueur dynamique et console d'exécution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

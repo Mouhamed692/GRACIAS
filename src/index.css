@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color-scheme: dark;
+    background-color: #0d0e11;
+  }
+
+  code, pre, kbd, .font-mono {
+    font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-feature-settings: "calt" 1, "liga" 1;
+  }
+}
+
+/* Custom scrollbars like Cursor / VS Code */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #272a34;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #393e4d;
+}
+
+/* Prism Token Themes (Cursor Dark Studio Theme) */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #636d83;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #8b949e;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f78c6c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #c3e88d;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #89ddff;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #c792ea;
+  font-weight: 500;
+}
+
+.token.function,
+.token.class-name {
+  color: #82aaff;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ffcb6b;
+}
+
+/* Pulsing ghost text indicator */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: cursorBlink 1s infinite ease-in-out;
+}
+
+/* Squiggle underline for errors */
+.error-squiggle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 3' fill='none'%3E%3Cpath d='M0 2 C 1.5 2, 1.5 0, 3 0 C 4.5 0, 4.5 2, 6 2' stroke='%23f87171' stroke-width='0.9' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  background-size: 6px 3px;
+  padding-bottom: 2px;
+}
+
+.warning-squiggle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 3' fill='none'%3E%3Cpath d='M0 2 C 1.5 2, 1.5 0, 3 0 C 4.5 0, 4.5 2, 6 2' stroke='%23fbbf24' stroke-width='0.9' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  background-size: 6px 3px;
+  padding-bottom: 2px;
+}
